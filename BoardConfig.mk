@@ -14,13 +14,13 @@
 
 include device/sony/yukon/PlatformConfig.mk
 
-TARGET_RECOVERY_FSTAB = device/sony/tianchi/rootdir/fstab.tianchi
+TARGET_RECOVERY_FSTAB = device/sony/wukong/rootdir/fstab.wukong
 
-TARGET_BOOTLOADER_BOARD_NAME := D5303
+TARGET_BOOTLOADER_BOARD_NAME := D2533
 
-BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 2399141888
-#Reserve space for data encryption (5112839168-16384)
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 5112822784
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1932735283
+#Reserve space for data encryption (5583457484-16384)
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 5583457484
 
-BOARD_KERNEL_CMDLINE += androidboot.hardware=tianchi
+BOARD_KERNEL_CMDLINE += androidboot.hardware=wukong
 BOARD_KERNEL_CMDLINE += mem=1003M

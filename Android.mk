@@ -1,4 +1,4 @@
-ifeq ($(filter-out tianchi,$(TARGET_DEVICE)),)
+ifeq ($(filter-out wukong,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 

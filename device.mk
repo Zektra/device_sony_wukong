@@ -13,19 +13,19 @@
 # limitations under the License.
 
 DEVICE_PACKAGE_OVERLAYS += \
-    device/sony/tianchi/overlay
+    device/sony/wukong/overlay
 
 # Device etc
 PRODUCT_COPY_FILES := \
-    device/sony/tianchi/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
-    device/sony/tianchi/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/sony/tianchi/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
-    device/sony/tianchi/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
-    device/sony/tianchi/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
+    device/sony/wukong/rootdir/system/etc/sensors/sensor_def_qcomdev.conf:system/etc/sensors/sensor_def_qcomdev.conf \
+    device/sony/wukong/rootdir/system/etc/mixer_paths.xml:system/etc/mixer_paths.xml \
+    device/sony/wukong/rootdir/system/etc/thermanager.xml:system/etc/thermanager.xml \
+    device/sony/wukong/rootdir/system/etc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
+    device/sony/wukong/rootdir/system/etc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
 # IDC
 PRODUCT_COPY_FILES += \
-    device/sony/tianchi/rootdir/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc
+    device/sony/wukong/rootdir/system/usr/idc/cyttsp4_mt.idc:system/usr/idc/cyttsp4_mt.idc
 
 # Device Specific Permissions
 PRODUCT_COPY_FILES += \
@@ -38,31 +38,31 @@ PRODUCT_PACKAGES += \
 
 # Device Init
 PRODUCT_PACKAGES += \
-    fstab.tianchi \
-    init.recovery.tianchi \
-    init.tianchi \
-    ueventd.tianchi
+    fstab.wukong \
+    init.recovery.wukong \
+    init.wukong \
+    ueventd.wukong
 
 # Lights
 PRODUCT_PACKAGES += \
-    lights.tianchi
+    lights.wukong
 
 # Simple PowerHAL
 PRODUCT_PACKAGES += \
-    power.tianchi
+    power.wukong
 
 # NFC config
 PRODUCT_PACKAGES += \
-    nfc_nci.tianchi
+    nfc_nci.wukong
 
 PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREBUILT_DPI := hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PROPERTY_OVERRIDES := \
-    ro.sf.lcd_density=240 \
+    ro.sf.lcd_density=267 \
     ro.usb.pid_suffix=1A9
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/sony/yukon/platform.mk)
-$(call inherit-product, vendor/sony/yukon-tianchi/tianchi-vendor.mk)
+$(call inherit-product, vendor/sony/yukon-wukong/wukong-vendor.mk)
